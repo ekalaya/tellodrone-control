@@ -1,5 +1,5 @@
 # tellodrone-control
-Drone DJI Tello Controller using the Go programming language
+Drone DJI/Ryze Tello Controller using the Go programming language
 
 Very early version with a lot of hacks.
 
@@ -64,5 +64,5 @@ ffmpeg -i "source.nal" -c:v copy -f mp4 "myOutputFile.mp4"
 
 ```
 go get github.com/ekalaya/tellodrone-control
-$GOPATH/bin/drone-control
+$GOPATH/bin/tellodrone-control
 ```
