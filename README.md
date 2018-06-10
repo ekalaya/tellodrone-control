@@ -59,3 +59,10 @@ ffmpeg -i "source.nal" -c:v copy -f mp4 "myOutputFile.mp4"
 
 * libavcodec - Used for decoding H.264 packets
 * Gobot dev - dev branch of gobot
+
+## Installation
+
+```
+go get github.com/ekalaya/tellodrone-control
+$GOPATH/bin/drone-control
+```
