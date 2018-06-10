@@ -1,44 +1,40 @@
+What works:
+* Basic controls using a gamepad (up, down, rotate left, rotate right, forward, backward, left, right)
+* Video stream
+* Flip controls work most of the time
 
-How to release tellopy to PyPi
+## Controller mappings
 
-# merge development branch
-git checkout master
-git merge develop-0.4.0
-git diff
--    version='0.4.0.dev0',
-+    version='0.4.0',
-git add setup.py 
-git commit -m "Update version number"
+These are meant for Dualshock 4 controllers. Yours might be completely different.
 
-# build package
-rm -rf dist/ build/
-python setup.py bdist_wheel
+### Left Analog
+- Up - Ascend
+- Down - Descend
+- Left - Rotate Counter-clockwise
+- Right - Rotate Clockwise
 
-# install package
-pip2 uninstall tellopy
-pip2 install ./dist/tellopy-*.whl 
-pip3 uninstall tellopy
-pip3 install ./dist/tellopy-*.whl 
+### Right Analog
+- Up - Forward
+- Down - Backward
+- Left - Sideways left
+- Right - Sideways right
 
-# test package
-python2 -m tellopy.examples.simple_takeoff
-python2 -m tellopy.examples.video_effect
-python2 -m tellopy.examples.joystick_and_video
-python3 -m tellopy.examples.simple_takeoff
-python3 -m tellopy.examples.video_effect
-python3 -m tellopy.examples.joystick_and_video
+### D-pad
+- Up - Flip forward
+- Back - Flip backward
+- Left - Flip left
+- Right - Flip right
 
-# upload package to PyPi
-twine upload dist/tellopy-0.4.0-py2.py3-none-any.whl 
+### Buttons
+- X - Take off / Land (toggle)
 
-# create new development branch
-push
-git checkout -b develop-0.5.0
-git diff | cat
--    version='0.4.0',
-+    version='0.5.0.dev0',
-git add setup.py 
-git commit -m "Create new develop-0.5.0 branch and update version number"
-git push -u origin develop-0.5.0
+## Preqrequisites
 
-[EOF]
+* libavcodec - Used for decoding H.264 packets
+
+## Installation
+
+```
+go get github.com/socketbind/drone-control
+$GOPATH/bin/drone-control
+```
