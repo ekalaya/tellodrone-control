@@ -1,4 +1,4 @@
-# tellodrone-control
+# Tellodrone-control
 Drone DJI/Ryze Tello Controller using the Go programming language
 
 Very early version with a lot of hacks.
@@ -14,7 +14,6 @@ What works:
 
 ![photo](files/IMG_3584.JPG)
 
-![photo](files/tello-and-gamepad.png)
 
 ## Usage
 
