@@ -35,6 +35,6 @@ These are meant for Dualshock 4 controllers. Yours might be completely different
 ## Installation
 
 ```
-go get github.com/socketbind/drone-control
-$GOPATH/bin/drone-control
+go get github.com/ekalaya/tellodrone-control
+$GOPATH/bin/tellodrone-control
 ```
